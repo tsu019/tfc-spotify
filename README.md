@@ -1,5 +1,5 @@
-# learn-terraform-spotify
+# 🎧 manage your playlists as code
 
-Create a playlist on Spotify by writing it as a Terraform configuration.
+tutorial: https://learn.hashicorp.com/tutorials/terraform/spotify-playlist
 
-Follow along with the tutorial at [learn.hashicorp.com](https://learn.hashicorp.com/tutorials/terraform/spotify-playlist).
+spotify prodiver creator: https://github.com/conradludgate/terraform-provider-spotify
