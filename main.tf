@@ -17,7 +17,7 @@ provider "spotify" {
 
 resource "spotify_playlist" "playlist" {
   name        = "spotify playlist as code question mark"
-  description = "just messin around with terraform"
+  description = "just messin around with terraform [source code in github]"
   public      = true
 
   tracks = [
@@ -27,10 +27,9 @@ resource "spotify_playlist" "playlist" {
     data.spotify_search_track.marc_e_bassy.tracks[0].id,
     data.spotify_search_track.brockhampton.tracks[0].id,
     data.spotify_search_track.niki.tracks[0].id,
-    data.spotify_track.location_unknown.id,
-    data.spotify_track.slow_dancing_in_the_dark.id,
-    data.spotify_track.little_things.id,
+    data.spotify_search_track.cody_lovaas.tracks[0].id,
     data.spotify_track.falling_for_you.id,
+    data.spotify_search_track.rex_orange_county.tracks[0].id,
   ]
 }
 
@@ -64,18 +63,16 @@ data "spotify_search_track" "niki" {
   name = "I Like U"
 }
 
-data "spotify_track" "location_unknown" {
-  url = "https://open.spotify.com/track/43kiDtoYD0nDJYxzQwclpT?si=78d976230ca24de8"
-}
-
-data "spotify_track" "slow_dancing_in_the_dark" {
-  url = "https://open.spotify.com/track/0rKtyWc8bvkriBthvHKY8d?si=2f003dfc7eba4688"
-}
-
-data "spotify_track" "little_things" {
-  url = "https://open.spotify.com/track/52681Ivj8kgCi90Lu8B9fl?si=a05bbfcadc0c42e8"
+data "spotify_search_track" "cody_lovaas" {
+  artist = "Cody Lovaas"
+  name = "Just So You Know"
 }
 
 data "spotify_track" "falling_for_you" {
   url = "https://open.spotify.com/track/24MWSatP5sTylISvJONhnB?si=d6133ac83d244ea4"
+}
+
+data "spotify_search_track" "rex_orange_county" {
+  artist = "Rex Orange County"
+  name = "Loving Is Easy"
 }
